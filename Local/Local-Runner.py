@@ -1,5 +1,6 @@
 from push_receiver import register, listen
 import json
+from os import system
 
 SENDER_ID = 896342988239
 
@@ -21,6 +22,8 @@ def on_notification(obj, notification, data_message):
   if n["body"]:
     text += ": " + n["body"]
   print(text)
+  system("bash -c 'git pull'")
+
 
 if __name__ == "__main__":
 
