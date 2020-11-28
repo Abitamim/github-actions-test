@@ -11,4 +11,4 @@ jobs:
            python-version: '3.x'
       - run: |
          python -m pip install pyfcm
-         python Github/test.py
+         python Github/Github-Runner.py
