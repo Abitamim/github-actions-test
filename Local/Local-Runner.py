@@ -26,6 +26,8 @@ def on_notification(obj, notification, data_message):
   system("bash -c 'git pull'")
   print("in between")
   arduino_run = Path ("run_code.txt").read_text()
+  print(arduino_run)
+  print(type(arduino_run))
   system(arduino_run)
 
 
