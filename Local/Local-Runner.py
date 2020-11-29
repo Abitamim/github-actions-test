@@ -22,8 +22,9 @@ def on_notification(obj, notification, data_message):
   text = n["title"]
   if n["body"]:
     text += ": " + n["body"]
-  print(text)
+  print("got command")
   system("bash -c 'git pull'")
+  print("in between")
   arduino_run = Path ("run_code.txt").read_text()
   system(arduino_run)
 
