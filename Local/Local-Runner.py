@@ -23,6 +23,8 @@ def on_notification(obj, notification, data_message):
     text += ": " + n["body"]
   print(text)
   system("bash -c 'git pull'")
+  arduino_run = open ("run_code.txt", "r")
+  system(arduino_run)
 
 
 if __name__ == "__main__":
