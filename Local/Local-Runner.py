@@ -1,6 +1,7 @@
 from push_receiver import register, listen
 import json
 from os import system
+from pathlib import Path
 
 SENDER_ID = 896342988239
 
@@ -23,7 +24,7 @@ def on_notification(obj, notification, data_message):
     text += ": " + n["body"]
   print(text)
   system("bash -c 'git pull'")
-  arduino_run = open ("run_code.txt", "r")
+  arduino_run = Path ("run_code.txt").read_text()
   system(arduino_run)
 
 
